@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f0f8">
+  <meta name="description" content="Your personal Afro hair-care calendar and routine.">
+  <title>Thalia | Afro Hair Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--paper:#f7f3e9;--white:#fffdf8;--ink:#302b26;--muted:#8b8278;--line:#eae3d6;--green:#4d6345;--green-pale:#edf0e5;--clay:#b95d38;--clay-pale:#f7e9df;--gold:#dfb34c;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;--r:5px}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px var(--sans);-webkit-font-smoothing:antialiased}button{font:inherit;color:inherit}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--clay);outline-offset:3px}.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 6vw;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none}.brand-leaf{color:var(--green);font-size:23px}.brand-name{font:600 22px var(--serif)}.brand-name em{font-size:12px;font-style:normal;font-weight:500;color:var(--muted);margin-left:8px}.desktop-nav{height:100%;display:flex;align-items:center;gap:34px}.nav-button{height:100%;position:relative;padding:0 2px;border:0;background:none;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer}.nav-button.active{color:var(--clay)}.nav-button.active:after{position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--clay);content:''}.profile{width:33px;height:33px;display:grid;place-items:center;border-radius:50%;background:#eee2cb;color:var(--green);font-size:11px;font-weight:700}.main{max-width:1200px;margin:auto;padding:31px 42px 88px}.page-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:0 0 20px}.eyebrow{margin:0 0 6px;color:var(--clay);font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}h1{margin:0;font:500 32px/1.2 var(--serif)}.head-note{max-width:280px;margin:0 0 3px;color:var(--muted);font-size:12px;line-height:1.6;text-align:right}.view{display:none}.view.active{display:block;animation:in .2s ease-out}@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(275px,.85fr);align-items:start;gap:18px}.stack{display:grid;gap:15px}.panel{overflow:hidden;border:1px solid var(--line);border-radius:var(--r);background:var(--white)}.pad{padding:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-title{margin:0;font:500 19px var(--serif)}.quiet{margin:0;color:var(--muted);font-size:11px}.monthbar{display:flex;align-items:center;gap:10px}.month-label{min-width:133px;font:500 18px var(--serif)}.icon-btn{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;cursor:pointer}.icon-btn:hover{background:var(--green-pale)}.icon-btn svg{width:15px;height:15px}.calendar{padding:17px 19px 18px}.weekdays,.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center}.weekdays{margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:600}.weekdays span{padding:7px 0}.cell{height:51px;display:grid;place-items:center}.date{width:34px;height:34px;position:relative;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:none;font-size:12px;cursor:pointer}.date:hover{background:var(--green-pale)}.date.today:not(.selected){outline:1px solid var(--clay);color:var(--clay)}.date.selected{background:var(--green);color:white}.dots{position:absolute;bottom:1px;left:50%;display:flex;gap:3px;transform:translateX(-50%)}.dot{width:4px;height:4px;border-radius:50%;background:var(--clay)}.dot.mask{background:#829467}.date.selected .dot{background:#f3d77b}.legend{display:flex;gap:17px;padding:12px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px}.legend span{display:flex;align-items:center;gap:6px}.legend i{width:7px;height:7px;border-radius:50%;background:var(--clay)}.legend i.mask{background:#829467}.logo-banner{display:grid;place-items:center;min-height:143px;padding:7px;background:#f5efdf}.logo-banner img{display:block;width:100%;height:137px;object-fit:contain}.ritual-panel{padding:19px 20px}.ritual-list{margin-top:14px}.ritual-row{min-height:56px;display:flex;align-items:center;gap:10px;border-top:1px solid var(--line)}.ritual-ico{width:32px;height:32px;flex:none;display:grid;place-items:center;border-radius:50%;background:var(--green-pale);color:var(--green)}.ritual-ico svg{width:16px;height:16px}.ritual-copy{min-width:0;flex:1}.ritual-name{margin:0;font-size:11px;font-weight:700}.ritual-meta{margin:4px 0 0;color:var(--muted);font-size:10px;line-height:1.45}.check{width:22px;height:22px;flex:none;display:grid;place-items:center;border:1px solid #d7d4ca;border-radius:50%;background:transparent;color:white;cursor:pointer}.check.done{border-color:var(--green);background:var(--green)}.check svg{width:13px;height:13px}.is-done .ritual-name{text-decoration:line-through;color:var(--muted)}.progress{padding:16px 18px;background:var(--green);color:white}.progress-top{display:flex;justify-content:space-between;color:#f7f3e9;font-size:11px}.track{height:4px;margin-top:12px;border-radius:5px;background:#ffffff45}.fill{width:0;height:100%;border-radius:inherit;background:#edcd76;transition:width .25s}.tip{padding:17px 19px;background:#f1e7d4}.tip-label{margin:0 0 7px;color:#987245;font-size:9px;font-weight:700;letter-spacing:.9px;text-transform:uppercase}.tip-text{margin:0;color:#504638;font:italic 14px/1.5 var(--serif)}.streak{display:flex;align-items:center;gap:12px;padding:15px 17px}.streak-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--clay-pale);color:var(--clay)}.streak-icon svg{width:18px;height:18px}.streak-number{margin:0;font:500 20px var(--serif)}.streak-label{margin:3px 0 0;color:var(--muted);font-size:10px}.streak-note{margin-left:auto;color:var(--muted);font-size:10px}.agenda{padding:21px}.agenda-date{margin:0;font:500 20px var(--serif)}.agenda-note{margin:5px 0 0;color:var(--muted);font-size:11px}.count{padding:5px 8px;border-radius:20px;background:var(--green-pale);color:var(--green);font-size:10px;font-weight:700;white-space:nowrap}.agenda-item{display:flex;gap:11px;padding:14px 0;border-top:1px solid var(--line)}.agenda-item:first-child{margin-top:16px}.agenda-clock{margin:0 0 3px;color:var(--muted);font-size:10px}.agenda-name{margin:0;font-size:11px;font-weight:700}.agenda-desc{margin:4px 0 0;color:var(--muted);font-size:10px;line-height:1.5}.btn{min-height:37px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 13px;border:1px solid var(--green);border-radius:var(--r);background:var(--green);color:white;font-size:11px;font-weight:700;cursor:pointer}.btn:hover{background:#3d5037}.btn svg{width:15px;height:15px}.btn.secondary{border-color:var(--line);background:var(--white);color:var(--ink)}.btn.secondary:hover{background:var(--green-pale)}.wide{width:100%;margin-top:14px}.empty{padding:16px 0;color:var(--muted);font-size:11px;line-height:1.6}.plan-day{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid var(--line)}.plan-day:first-child{border-top:0}.plan-day b{font-size:11px}.plan-day p{margin:4px 0 0;color:var(--muted);font-size:10px}.plan-time{color:var(--muted);font-size:10px;white-space:nowrap}.remove{border:0;background:transparent;color:var(--clay);font-size:10px;cursor:pointer}.mobile-nav{display:none}.backdrop[hidden]{display:none}.backdrop{position:fixed;z-index:5;inset:0;display:grid;place-items:center;padding:18px;background:#27231e77}.modal{width:min(100%,410px);padding:22px;border:1px solid var(--line);border-radius:6px;background:var(--white)}.modal-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:19px}.modal h2{margin:0;font:500 24px var(--serif)}.modal-subtitle{margin:5px 0 0;color:var(--muted);font-size:11px}.close{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;cursor:pointer}.field{display:grid;gap:6px;margin:0 0 13px}.field label{font-size:10px;font-weight:700}.field input,.field select{width:100%;height:39px;padding:0 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);color:var(--ink);font:12px var(--sans)}.actions{display:flex;justify-content:end;gap:8px;margin-top:17px}.toast{position:fixed;z-index:6;bottom:20px;left:50%;padding:10px 15px;transform:translate(-50%,8px);border-radius:4px;background:var(--ink);color:white;font-size:11px;opacity:0;pointer-events:none;transition:.2s}.toast.show{transform:translate(-50%,0);opacity:1}
+    @media(min-width:1100px){.main{padding-right:62px;padding-left:62px}.cell{height:59px}.date{width:37px;height:37px}}
+    @media(max-width:760px){.topbar{padding:0 22px}.main{padding:28px 22px 82px}.layout{grid-template-columns:minmax(0,1fr) minmax(230px,.8fr);gap:13px}.calendar{padding-right:13px;padding-left:13px}.cell{height:44px}.date{width:31px;height:31px}.pad,.ritual-panel,.agenda{padding:17px}.logo-banner{min-height:118px}.logo-banner img{height:112px}}
+    @media(max-width:560px){.topbar{height:56px;padding:0 17px}.desktop-nav{display:none}.main{padding:24px 15px 95px}.page-head{margin-bottom:16px}h1{font-size:29px}.head-note{display:none}.layout{grid-template-columns:minmax(0,1fr);gap:13px}.overview .stack:last-child{grid-row:1}.overview .stack:first-child{grid-row:2}.calendar-view .stack:last-child{grid-row:1}.calendar-view .stack:first-child{grid-row:2}.cell{height:46px}.date{width:33px;height:33px}.calendar{padding:15px 11px}.legend{padding:11px 14px}.mobile-nav{position:fixed;z-index:4;right:0;bottom:0;left:0;height:65px;display:grid;grid-template-columns:repeat(3,1fr);padding:4px 8px max(4px,env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fffdf8f5;backdrop-filter:blur(12px)}.mobile-nav .nav-button{display:flex;height:auto;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0;font-size:9px}.mobile-nav .nav-button.active:after{display:none}.mobile-nav .nav-button svg{width:19px;height:19px}.streak-note{display:none}}
+    @media(max-width:360px){.topbar{padding-right:10px;padding-left:10px;gap:8px}.brand{gap:4px}.brand-leaf{font-size:17px}.brand-name{font-size:20px}.brand-name em{display:none}.profile{width:27px;height:27px;flex:none}.page-head h1{font-size:27px}.ritual-panel .panel-head{gap:6px}.ritual-panel .panel-title{font-size:17px}.ritual-panel .count{max-width:49px;white-space:normal;text-align:center;line-height:1.25}}
+    .logo-banner{aspect-ratio:1.55;min-height:0;padding:0}.logo-banner img{width:100%;height:100%;object-fit:cover;object-position:left center}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+    body{font-size:calc(14px + 1pt)}
+    .brand-leaf{font-size:calc(23px + 1pt)}
+    .brand-name{font-size:calc(22px + 1pt)}
+    .brand-name em,.nav-button,.head-note,.date,.field input,.field select{font-size:calc(12px + 1pt)}
+    .profile,.quiet,.ritual-name,.progress-top,.agenda-note,.agenda-name,.btn,.empty,.plan-day b,.modal-subtitle,.toast{font-size:calc(11px + 1pt)}
+    .eyebrow,.weekdays,.legend,.ritual-meta,.streak-label,.streak-note,.count,.agenda-clock,.agenda-desc,.plan-day p,.plan-time,.remove,.field label{font-size:calc(10px + 1pt)}
+    .tip-label{font-size:calc(9px + 1pt)}
+    .tip-text{font-size:calc(14px + 1pt)}
+    .streak-number{font-size:calc(20px + 1pt)}
+    .agenda-date{font-size:calc(20px + 1pt)}
+    .modal h2{font-size:calc(24px + 1pt)}
+    .panel-title{font-size:calc(19px + 1pt)}
+    .month-label{font-size:calc(18px + 1pt)}
+    h1{font-size:calc(32px + 1pt)}
+    @media(max-width:560px){h1{font-size:calc(29px + 1pt)}.mobile-nav .nav-button{font-size:calc(9px + 1pt)}}
+    @media(max-width:360px){.brand-leaf{font-size:calc(17px + 1pt)}.brand-name{font-size:calc(20px + 1pt)}.page-head h1{font-size:calc(27px + 1pt)}.ritual-panel .panel-title{font-size:calc(17px + 1pt)}}
+    .profile{border:0;cursor:pointer}
+    .modal{max-height:calc(100dvh - 36px);overflow-y:auto}
+    .profile-photo-editor{display:flex;align-items:center;gap:12px}
+    .profile-photo-preview{width:76px;height:76px;flex:none;border:1px solid var(--line);border-radius:50%;object-fit:cover;background:var(--green-pale)}
+    .profile-photo-preview[hidden]{display:none}
+    .profile-photo-controls{min-width:0;flex:1}
+    .profile-photo-controls input[type=file]{height:auto;padding:8px 0;border:0;background:transparent}
+    .gender-description{display:grid;gap:6px;margin-top:10px}
+    .gender-description[hidden]{display:none}
+    :root{--purple:#3a1747;--purple-deep:#2a1033;--lilac:#f6f0f8;--gold:#f2b134;--paper:var(--lilac);--white:#fffbff;--ink:var(--purple-deep);--muted:#796482;--line:#e6d9eb;--green:var(--purple);--green-pale:#efe6f3;--clay:#70427e;--clay-pale:#fff0cc}
+    .profile{background:var(--purple);color:var(--white);box-shadow:inset 0 0 0 1px var(--gold)}
+    .date.selected .dot{background:var(--gold)}
+    .dot.mask,.legend i.mask{background:var(--gold)}
+    .logo-banner{background:var(--lilac)}
+    .check{border-color:#c9b8d1}
+    .progress-top{color:#f8f0fb}
+    .fill{background:var(--gold)}
+    .tip{background:#fff0cc}
+    .tip-label{color:#704b0b}
+    .tip-text{color:var(--purple-deep)}
+    .btn{color:var(--purple-deep);background:var(--gold)}
+    .btn:hover{background:#e5a321}
+    .btn.secondary{color:var(--purple);background:var(--white);border-color:var(--line)}
+    .btn.secondary:hover,.icon-btn:hover,.date:hover{background:var(--green-pale)}
+    .backdrop{background:rgba(42,16,51,.72)}
+    .mobile-nav{background:rgba(255,251,255,.96)}
+    .profile-photo-preview{background:var(--green-pale)}
+    .product-row{display:flex;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+    .product-row input{min-width:0;flex:1;height:39px;padding:0 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);color:var(--ink);font:calc(12px + 1pt) var(--sans)}
+    .product-row .remove{flex:none}
+    .product-actions{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+    .hair-goal-add{display:flex;align-items:end;gap:8px;margin-top:14px}
+    .hair-goal-add .field{min-width:0;flex:1;margin:0}
+    .hair-goal-add select{width:100%;height:39px;padding:0 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);color:var(--ink);font:calc(12px + 1pt) var(--sans)}
+    .product-picker{border:1px solid var(--line);border-radius:var(--r);background:var(--white)}
+    .product-picker summary{padding:10px;cursor:pointer;color:var(--ink)}
+    .product-picker-options{display:grid;gap:8px;max-height:155px;overflow:auto;padding:10px;border-top:1px solid var(--line)}
+    .product-option{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:12px}
+    .product-option input{accent-color:var(--green)}
+    .product-used{margin:4px 0 0;color:var(--green);font-size:11px;line-height:1.5}
+    #ritual-date-field[hidden]{display:none}
+  </style>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#" aria-label="Thalia home"><span class="brand-leaf" aria-hidden="true">❧</span><span class="brand-name">Thalia<em>AFRO HAIR CARE</em></span></a><nav class="desktop-nav" aria-label="Main navigation"><button class="nav-button active" data-view="today">Today</button><button class="nav-button" data-view="calendar">Calendar</button><button class="nav-button" data-view="plan">My routine</button></nav><button id="auth-button" type="button">Sign in</button><button class="profile" type="button" data-profile aria-label="Edit your profile" title="Edit your profile">YU</button></header>
+
+  <main class="main">
+    <section class="view active" id="view-today"><div class="page-head"><div><p class="eyebrow" id="eyebrow"></p><h1>Your hair, your rhythm.</h1></div><p class="head-note">Your care, at your pace. A little consistency goes a long way.</p></div><div class="layout overview">
+      <div class="stack"><section class="panel"><div class="calendar"><div class="panel-head" style="margin-bottom:12px"><strong class="month-label" id="month-a"></strong><div class="monthbar"><button class="icon-btn" data-month="-1" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="icon-btn" data-month="1" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div></div><div id="calendar-a"></div></div><div class="legend"><span><i></i>Wash day</span><span><i class="mask"></i>Deep treatment</span></div></section><section class="panel ritual-panel"><div class="panel-head"><div><h2 class="panel-title" id="agenda-title"></h2><p class="quiet" id="agenda-date" style="margin-top:5px"></p></div><span class="count" id="agenda-count"></span></div><div id="rituals-today"></div></section></div>
+      <div class="stack"><section class="panel logo-banner"><img src="Thalia logo@2x.png" alt="Thalia Afro Hair Care"></section><section class="panel progress"><div class="progress-top"><span>Today's little wins</span><b id="progress-count">0 of 0</b></div><div class="track"><div class="fill" id="progress-fill"></div></div></section><section class="panel tip"><p class="tip-label">A little hair wisdom</p><p class="tip-text" id="tip"></p></section><section class="panel streak"><span class="streak-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-3-2-5-3-6-.4 2-1.4 3-2 3C13 8 10 5 8 4c1 4-3 8-3 11a7 7 0 0 0 7 7Z"/></svg></span><div><p class="streak-number" id="streak"></p><p class="streak-label">care streak</p></div><span class="streak-note" id="streak-note"></span></section></div>
+    </div></section>
+    <section class="view" id="view-calendar"><div class="page-head"><div><p class="eyebrow">Little rituals, lovely results</p><h1>Your calendar.</h1></div><p class="head-note">A plan for your hair, with room to breathe.</p></div><div class="layout calendar-view"><div class="stack"><section class="panel"><div class="calendar"><div class="panel-head" style="margin-bottom:12px"><strong class="month-label" id="month-b"></strong><div class="monthbar"><button class="icon-btn" data-month="-1" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="icon-btn" data-month="1" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div></div><div id="calendar-b"></div></div><div class="legend"><span><i></i>Wash day</span><span><i class="mask"></i>Deep treatment</span></div></section><section class="panel streak"><span class="streak-icon" aria-hidden="true">✿</span><div><p class="streak-number" id="streak-b"></p><p class="streak-label">care streak</p></div></section></div><aside class="panel agenda"><div class="panel-head"><div><h2 class="agenda-date" id="selected-heading"></h2><p class="agenda-note" id="selected-note"></p></div><span class="count" id="selected-count"></span></div><div id="selected-agenda"></div><button class="btn wide" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add a ritual</button></aside></div></section>
+    <section class="view" id="view-plan"><div class="page-head"><div><p class="eyebrow">Care that feels like yours</p><h1>My routine.</h1></div><p class="head-note">A gentle weekly rhythm, shaped around you.</p></div><div class="layout"><div class="stack"><section class="panel pad"><div class="panel-head" style="margin-bottom:13px"><div><h2 class="panel-title">Your weekly rhythm</h2><p class="quiet" style="margin-top:5px">A simple place to start.</p></div><span class="count">Weekly</span></div><div id="weekly"></div></section><section class="panel pad"><div class="panel-head"><div><h2 class="panel-title">Your rituals</h2><p class="quiet" style="margin-top:5px">Make your routine your own.</p></div></div><div id="all-rituals" style="margin-top:13px"></div><button class="btn wide" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add a ritual</button></section></div><div class="stack"><section class="panel logo-banner"><img src="Thalia logo@2x.png" alt="Thalia Afro Hair Care"></section><section class="panel tip"><p class="tip-label">Keep in mind</p><p class="tip-text">Listen to your scalp and strands. Your routine is a guide, never a rule.</p></section><section class="panel progress"><div class="progress-top"><span>Today's little wins</span><b id="plan-count"></b></div><div class="track"><div class="fill" id="plan-fill"></div></div></section></div></div></section>
+  </main>
+  <nav class="mobile-nav" aria-label="Main navigation"><button class="nav-button active" data-view="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg>Today</button><button class="nav-button" data-view="calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Calendar</button><button class="nav-button" data-view="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M12 14c-4 0-6-2.5-6-6 4 0 6 2.5 6 6Zm0-3c0-3.7 2-6 6-6 0 3.6-2 6-6 6Z"/></svg>My routine</button></nav>
+  <div class="backdrop" id="modal-backdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading"><div class="modal-head"><div><h2 id="modal-heading">A new little ritual</h2><p class="modal-subtitle">Make room for something that feels good.</p></div><button class="close" type="button" id="close-modal" aria-label="Close">×</button></div><form id="ritual-form"><div class="field"><label for="name">Ritual name</label><input id="name" name="name" maxlength="48" placeholder="e.g. Scalp massage" required></div><div class="field"><label for="category">Kind of care</label><select id="category" name="category"><option value="wash">Wash day</option><option value="mask">Deep treatment</option><option value="care">Everyday care</option><option value="reset">Midweek Reset</option><option value="protective">Protective Style</option></select></div><div class="field"><label for="schedule">Add to my routine</label><select id="schedule" name="schedule"><option value="once">Just this date</option><option value="monthly">Once a month</option><option value="0">Every Sunday</option><option value="1">Every Monday</option><option value="2">Every Tuesday</option><option value="3">Every Wednesday</option><option value="4">Every Thursday</option><option value="5">Every Friday</option><option value="6">Every Saturday</option></select></div><div class="field" id="ritual-date-field"><label for="ritual-date">Choose a date</label><input id="ritual-date" type="date" name="date" required></div><div class="field"><label for="time">A time that feels right</label><input id="time" type="time" name="time" value="09:00"></div><div class="actions"><button class="btn secondary" type="button" id="cancel-modal">Cancel</button><button class="btn" type="submit">Save ritual</button></div></form></section></div><div class="toast" role="status" id="toast"></div>
+  <div class="backdrop" id="profile-backdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="profile-heading"><div class="modal-head"><div><h2 id="profile-heading">Your profile</h2><p class="modal-subtitle">Save your details and hair profile.</p></div><button class="close" type="button" id="close-profile" aria-label="Close">×</button></div><form id="hair-profile-form"><div class="field"><label for="profile-name">Name</label><input id="profile-name" name="name" type="text" autocomplete="name" maxlength="80" required></div><div class="field"><label for="profile-age">Age</label><input id="profile-age" name="age" type="number" min="1" max="120" inputmode="numeric" required></div><div class="field"><label for="profile-location">Location</label><input id="profile-location" name="location" type="text" autocomplete="address-level2" maxlength="100" required></div><div class="field"><label for="profile-email">Email</label><input id="profile-email" name="email" type="email" autocomplete="email" maxlength="254" required></div><div class="field"><label for="hair-texture">Hair texture</label><select id="hair-texture" name="texture" required><option value="" selected disabled>Choose hair texture</option><option value="fine">Fine hair</option><option value="medium">Medium hair</option><option value="coarse">Coarse hair</option><option value="thick">Thick hair</option></select></div><div class="field"><label for="hair-density">Hair density</label><select id="hair-density" name="density" required><option value="" selected disabled>Choose hair density</option><option value="low">Low density</option><option value="medium">Medium density</option><option value="high">High density</option></select></div><div class="field"><label for="hair-porosity">Hair porosity</label><select id="hair-porosity" name="porosity" required><option value="" selected disabled>Choose hair porosity</option><option value="low">Low porosity</option><option value="medium">Medium porosity</option><option value="high">High porosity</option></select></div><div class="actions"><button class="btn secondary" type="button" id="cancel-profile">Cancel</button><button class="btn" type="submit">Save profile</button></div></form></section></div>
+  <script>
+  (()=>{'use strict';
+    const DAY=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],MS=86400000;
+    const today=new Date();today.setHours(0,0,0,0);
+    const key=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const dateOf=k=>{const[y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d)};
+    const fmt=(d,o={weekday:'long',month:'long',day:'numeric'})=>new Intl.DateTimeFormat('en-US',o).format(d);
+    const read=(k,fb)=>{try{return JSON.parse(localStorage.getItem(k))||fb}catch{return fb}};
+    let rituals=read('thalia-rituals',[
+      {id:'wash',name:'Wash & Condition',category:'wash',day:3,time:'09:00',detail:'Gentle cleanse, then your favorite conditioner.'},
+      {id:'mask',name:'Deep Conditioning mask',category:'mask',day:0,time:'10:00',detail:'Give your strands a little extra love.'},
+      {id:'scalp',name:'Scalp Massage',category:'care',day:2,time:'20:00',detail:'A few minutes of fingertip massage.'},
+      {id:'refresh',name:'Refresh & Moisturize',category:'care',day:5,time:'09:00',detail:'A little hydration, right where you need it.'}
+    ]);
+    let done=read('thalia-done',{}),hairProfile=read('thalia-hair-profile',{name:'',age:'',location:'',email:'',gender:'',genderDescription:'',texture:'',density:'',porosity:''}),storedProducts=read('thalia-products',[]),products=(Array.isArray(storedProducts)?storedProducts:[]).map((product,index)=>typeof product==='string'?{id:`product-${index}`,name:product}:{id:String(product.id||`product-${index}`),name:String(product.name||'').trim()}).filter(product=>product.name),selected=key(today),month=new Date(today.getFullYear(),today.getMonth(),1),toastTimer;
+    const profileButton=document.querySelector('[data-profile]');let profilePhotoDraft=hairProfile.photo||'';function renderProfileBadge(){const initials=(hairProfile.name||'').trim().split(/\s+/).filter(Boolean).slice(0,2).map(part=>part[0]).join('').toUpperCase();profileButton.replaceChildren();if(hairProfile.photo){const image=document.createElement('img');image.src=hairProfile.photo;image.alt='';profileButton.append(image)}else profileButton.textContent=initials||'YU';profileButton.setAttribute('aria-label',hairProfile.name?`Your profile: ${hairProfile.name}`:'Edit your profile')}renderProfileBadge();
+    const profilePhotoField=document.createElement('div');profilePhotoField.className='field';profilePhotoField.innerHTML='<label for="profile-photo-input">Profile picture</label><div class="profile-photo-editor"><img id="profile-photo-preview" class="profile-photo-preview" alt="Profile picture preview" hidden><div class="profile-photo-controls"><input id="profile-photo-input" type="file" accept="image/*"><button class="btn secondary" id="remove-profile-photo" type="button">Remove picture</button></div></div>';document.getElementById('profile-name').closest('.field').before(profilePhotoField);const profilePhotoPreview=document.getElementById('profile-photo-preview');function renderProfilePhoto(){if(profilePhotoDraft){profilePhotoPreview.src=profilePhotoDraft;profilePhotoPreview.hidden=false}else{profilePhotoPreview.removeAttribute('src');profilePhotoPreview.hidden=true}}renderProfilePhoto();document.getElementById('profile-photo-input').addEventListener('change',async e=>{const file=e.currentTarget.files?.[0];if(!file)return;if(!file.type.startsWith('image/')){toast('Choose an image file.');e.currentTarget.value='';return}try{const bitmap=await createImageBitmap(file),size=512,scale=Math.max(size/bitmap.width,size/bitmap.height),canvas=document.createElement('canvas');canvas.width=size;canvas.height=size;const context=canvas.getContext('2d');context.fillStyle='#fffdf8';context.fillRect(0,0,size,size);context.drawImage(bitmap,(size-bitmap.width*scale)/2,(size-bitmap.height*scale)/2,bitmap.width*scale,bitmap.height*scale);bitmap.close();profilePhotoDraft=canvas.toDataURL('image/jpeg',.82);renderProfilePhoto()}catch{toast('This image could not be loaded.')}});document.getElementById('remove-profile-photo').addEventListener('click',()=>{profilePhotoDraft='';document.getElementById('profile-photo-input').value='';renderProfilePhoto()});
+    const genderField=document.createElement('div');genderField.className='field';genderField.innerHTML='<label for="profile-gender">Gender</label><select id="profile-gender" name="gender"><option value="">Select gender (optional)</option><option value="woman">Woman</option><option value="man">Man</option><option value="non-binary">Non-binary</option><option value="self-describe">Self-describe</option><option value="prefer-not-to-say">Prefer not to say</option></select><div class="gender-description" id="gender-description-field" hidden><label for="profile-gender-description">Describe your gender</label><input id="profile-gender-description" name="genderDescription" type="text" maxlength="80"></div>';document.getElementById('profile-age').closest('.field').after(genderField);const genderSelect=document.getElementById('profile-gender'),genderDescriptionField=document.getElementById('gender-description-field');genderSelect.addEventListener('change',()=>{genderDescriptionField.hidden=genderSelect.value!=='self-describe';if(genderSelect.value!=='self-describe')document.getElementById('profile-gender-description').value=''});
+    if(Array.isArray(storedProducts)&&storedProducts.some(product=>typeof product==='string'))localStorage.setItem('thalia-products',JSON.stringify(products));
+    const icon=type=>type==='wash'?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg>':type==='mask'?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path d="M9 14h6"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20V10M12 14c-4 0-6-2.5-6-6 4 0 6 2.5 6 6Zm0-3c0-3.7 2-6 6-6 0 3.6-2 6-6 6Z"/></svg>';
+    const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const productSummary=r=>{const names=(r.products||[]).map(id=>products.find(product=>product.id===id)?.name).filter(Boolean);return names.length?`<p class="product-used">Products: ${names.map(safe).join(', ')}</p>`:''};
+    const getRituals=d=>rituals.filter(r=>{
+      if(r.date===key(d)) return true;
+      if(r.day!==undefined&&r.day===d.getDay()) return true;
+      if(r.monthly&&r.monthDay!==undefined&&r.monthDay===d.getDate()) return true;
+      return false;
+    }).sort((a,b)=>a.time.localeCompare(b.time));
+    const getDone=k=>new Set(done[k]||[]);
+
+const save = () => {
+  localStorage.setItem('thalia-rituals', JSON.stringify(rituals));
+  localStorage.setItem('thalia-done', JSON.stringify(done));
+
+  if (!thaliaCloudReady) {
+    console.log('Cloud sync skipped: Thalia cloud data is not ready yet.');
+    return;
+  }
+
+  Promise.all([
+    saveThaliaCloudRecord('rituals', rituals),
+    saveThaliaCloudRecord('done', done)
+  ]).then(() => {
+    console.log('Routines and completion records synced to the cloud.');
+  }).catch(error => {
+    console.error('Routine cloud sync failed:', error);
+  });
+};
+
+    document.getElementById('eyebrow').textContent=`${fmt(today,{weekday:'long'})} · ${fmt(today,{month:'long',day:'numeric'})}`;
+    document.getElementById('tip').textContent=['Detangle from the ends up. Your strands will thank you.','A gentle scalp massage can be a lovely little reset.','A satin bonnet helps keep overnight care kind to your curls.','Keep your hair hydrated, especially before styling.','Protective styles can be a welcome rest for your strands.'][Math.floor((today.getFullYear()*367+today.getMonth()*31+today.getDate())%5)];
+    function calendar(id,label){document.getElementById(label).textContent=fmt(month,{month:'long',year:'numeric'});const first=new Date(month.getFullYear(),month.getMonth(),1).getDay(),length=new Date(month.getFullYear(),month.getMonth()+1,0).getDate(),cells=Math.ceil((first+length)/7)*7;let html='<div class="weekdays">'+['S','M','T','W','T','F','S'].map(x=>`<span>${x}</span>`).join('')+'</div><div class="days" role="grid">';for(let i=0;i<cells;i++){const n=i-first+1;if(n<1||n>length){html+='<span class="cell"></span>';continue}const d=new Date(month.getFullYear(),month.getMonth(),n),k=key(d),items=getRituals(d),cls=['date'];if(k===selected)cls.push('selected');if(k===key(today))cls.push('today');const dots=items.slice(0,2).map(r=>`<i class="dot ${r.category==='mask'?'mask':''}"></i>`).join('');html+=`<span class="cell"><button class="${cls.join(' ')}" data-date="${k}" aria-label="${fmt(d)}${items.length?`, ${items.length} rituals`:''}" ${k===selected?'aria-pressed="true"':''}>${n}${dots?`<span class="dots">${dots}</span>`:''}</button></span>`}document.getElementById(id).innerHTML=html+'</div>'}
+    function row(r,d){const k=key(d),isDone=getDone(k).has(r.id),time=fmt(new Date(`2000-01-01T${r.time}`),{hour:'numeric',minute:'2-digit'});return `<div class="ritual-row ${isDone?'is-done':''}"><span class="ritual-ico">${icon(r.category)}</span><div class="ritual-copy"><p class="ritual-name">${safe(r.name)}</p><p class="ritual-meta">${time}${r.detail?` · ${safe(r.detail)}`:''}</p>${productSummary(r)}</div><button class="check ${isDone?'done':''}" data-check="${safe(r.id)}" data-key="${k}" aria-label="${isDone?'Mark incomplete':'Mark complete'}: ${safe(r.name)}" aria-pressed="${isDone}">${isDone?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>':''}</button></div>`}
+    function streak(){let d=new Date(today),n=0;if(!Object.values(done).some(a=>a.length))return 0;if(!(done[key(d)]||[]).length)d=new Date(d.getTime()-MS);while((done[key(d)]||[]).length&&n<3650){n++;d=new Date(d.getTime()-MS)}return n}
+    function progress(date,prefix=''){const list=getRituals(date),count=list.filter(r=>getDone(key(date)).has(r.id)).length;const a=document.getElementById(prefix+'count'),b=document.getElementById(prefix+'fill');if(a)a.textContent=`${count} of ${list.length}`;if(b)b.style.width=`${list.length?Math.round(100*count/list.length):0}%`}
+    function agenda(date){const k=key(date),list=getRituals(date),heading=document.getElementById('selected-heading');if(heading)heading.textContent=fmt(date);const note=document.getElementById('selected-note');if(note)note.textContent=k===key(today)?'A little care, just for you.':'Your planned hair-care rituals.';const count=document.getElementById('selected-count');if(count)count.textContent=`${list.length} ${list.length===1?'ritual':'rituals'}`;const target=document.getElementById('selected-agenda');if(target)target.innerHTML=list.length?list.map(r=>`<article class="agenda-item"><span class="ritual-ico">${icon(r.category)}</span><div><p class="agenda-clock">${fmt(new Date(`2000-01-01T${r.time}`),{hour:'numeric',minute:'2-digit'})}</p><h3 class="agenda-name">${safe(r.name)}</h3><p class="agenda-desc">${safe(r.detail||'A moment of care for your hair.')}</p>${productSummary(r)}</div></article>`).join(''):'<p class="empty">Nothing planned just yet. Rest can be part of the routine, too.</p>';document.getElementById('agenda-title').textContent=k===key(today)?"Today's rituals":fmt(date,{weekday:'long',month:'short',day:'numeric'});document.getElementById('agenda-date').textContent=k===key(today)?'A little care, just for you.':'Your planned hair-care rituals.';document.getElementById('agenda-count').textContent=`${list.length} ${list.length===1?'ritual':'rituals'}`;document.getElementById('rituals-today').innerHTML=list.length?`<div class="ritual-list">${list.map(r=>row(r,date)).join('')}</div>`:'<p class="empty">A little rest can be part of your routine, too.</p>'}
+    function plan(){const weekly=rituals.filter(r=>r.day!==undefined).sort((a,b)=>a.day-b.day||a.time.localeCompare(b.time)),unique=[...new Map(rituals.map(r=>[r.id,r])).values()];document.getElementById('weekly').innerHTML=weekly.length?weekly.map(r=>`<div class="plan-day"><div><b>${DAY[r.day]}</b><p>${safe(r.name)}</p>${productSummary(r)}</div><span class="plan-time">${fmt(new Date(`2000-01-01T${r.time}`),{hour:'numeric',minute:'2-digit'})}</span></div>`).join(''):'<p class="empty">Add a weekly ritual to find your rhythm.</p>';document.getElementById('all-rituals').innerHTML=unique.length?unique.map(r=>`<div class="plan-day"><div><b>${safe(r.name)}</b><p>${r.monthly?`Once a month · Day ${r.monthDay}`:r.day!==undefined?`Every ${DAY[r.day]}`:`Just once · ${r.date?fmt(dateOf(r.date),{month:'short',day:'numeric'}):'One time'}`}</p>${productSummary(r)}</div><button class="remove" data-remove="${safe(r.id)}" aria-label="Remove ${safe(r.name)}">Remove</button></div>`).join(''):'<p class="empty">Your rituals will feel right at home here.</p>';document.getElementById('streak-b').textContent=`${streak()} ${streak()===1?'day':'days'}`;progress(today,'plan-')}
+    function render(){calendar('calendar-a','month-a');calendar('calendar-b','month-b');const date=dateOf(selected);agenda(date);progress(date);const n=streak();document.getElementById('streak').textContent=`${n} ${n===1?'day':'days'}`;document.getElementById('streak-note').textContent=n?'Lovely and consistent':'Start with today';plan()}
+    function switchView(name){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===`view-${name}`));document.querySelectorAll('[data-view]').forEach(b=>{const active=b.dataset.view===name;b.classList.toggle('active',active);active?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current')});window.scrollTo({top:0,behavior:'smooth'})}
+    let previousFocus;const backdrop=document.getElementById('modal-backdrop'),profileBackdrop=document.getElementById('profile-backdrop'),ritualForm=document.getElementById('ritual-form'),ritualDateField=document.getElementById('ritual-date-field'),ritualDateInput=document.getElementById('ritual-date'),scheduleSelect=document.getElementById('schedule');function updateRitualDateField(){const needsDate=scheduleSelect.value==='once';ritualDateField.hidden=!needsDate;ritualDateInput.required=needsDate}function openModal(){previousFocus=document.activeElement;ritualDateInput.value=selected;updateRitualDateField();backdrop.hidden=false;document.getElementById('name').focus()}function closeModal(){backdrop.hidden=true;ritualForm.reset();updateRitualDateField();if(previousFocus)previousFocus.focus()}scheduleSelect.addEventListener('change',updateRitualDateField);let profilePreviousFocus;function openProfile(){profilePreviousFocus=document.activeElement;const form=document.getElementById('hair-profile-form');form.elements.name.value=hairProfile.name||'';form.elements.age.value=hairProfile.age||'';form.elements.location.value=hairProfile.location||'';form.elements.email.value=hairProfile.email||'';form.elements.gender.value=hairProfile.gender||'';form.elements.genderDescription.value=hairProfile.genderDescription||'';genderSelect.dispatchEvent(new Event('change'));form.elements.genderDescription.value=hairProfile.genderDescription||'';form.elements.texture.value=hairProfile.texture||'';form.elements.density.value=hairProfile.density||'';form.elements.porosity.value=hairProfile.porosity||'';profilePhotoDraft=hairProfile.photo||'';renderProfilePhoto();form.elements.name.focus();profileBackdrop.hidden=false}function closeProfile(){profileBackdrop.hidden=true;if(profilePreviousFocus)profilePreviousFocus.focus()}function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2200)}
+    document.addEventListener('click',e=>{if(e.target.closest('[data-profile]')){openProfile();return}const nav=e.target.closest('[data-view]');if(nav){switchView(nav.dataset.view);return}const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;const x=dateOf(selected);month=new Date(x.getFullYear(),x.getMonth(),1);render();return}const m=e.target.closest('[data-month]');if(m){month=new Date(month.getFullYear(),month.getMonth()+Number(m.dataset.month),1);render();return}const check=e.target.closest('[data-check]');if(check){const k=check.dataset.key,set=getDone(k);set.has(check.dataset.check)?set.delete(check.dataset.check):set.add(check.dataset.check);done[k]=[...set];save();render();return}const remove=e.target.closest('[data-remove]');if(remove){const removed=rituals.find(r=>r.id===remove.dataset.remove);rituals=rituals.filter(r=>r.id!==remove.dataset.remove);for(const k of Object.keys(done))done[k]=done[k].filter(id=>id!==remove.dataset.remove);save();render();toast(`${removed?.name||'Ritual'} removed.`);return}if(e.target.closest('[data-add]'))openModal()});
+    document.getElementById('close-modal').addEventListener('click',closeModal);document.getElementById('cancel-modal').addEventListener('click',closeModal);backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeModal()});document.getElementById('close-profile').addEventListener('click',closeProfile);document.getElementById('cancel-profile').addEventListener('click',closeProfile);profileBackdrop.addEventListener('click',e=>{if(e.target===profileBackdrop)closeProfile()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!profileBackdrop.hidden)closeProfile();else if(!backdrop.hidden)closeModal()}});
+    document.getElementById('hair-profile-form').addEventListener('submit',e=>{e.preventDefault();const form=new FormData(e.currentTarget);hairProfile={name:String(form.get('name')).trim(),age:Number(form.get('age')),location:String(form.get('location')).trim(),email:String(form.get('email')).trim(),gender:String(form.get('gender')||''),genderDescription:String(form.get('genderDescription')||'').trim(),texture:String(form.get('texture')),density:String(form.get('density')),porosity:String(form.get('porosity')),photo:profilePhotoDraft};localStorage.setItem('thalia-hair-profile',JSON.stringify(hairProfile));renderProfileBadge();closeProfile();toast('Your profile has been saved.')});
+    ritualForm.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget),schedule=f.get('schedule'),r={id:`custom-${Date.now()}`,name:String(f.get('name')).trim(),category:String(f.get('category')),time:String(f.get('time')),detail:'A little moment of care.',products:f.getAll('ritualProducts').map(String)};if(schedule==='once')r.date=String(f.get('date'));else if(schedule==='monthly'){r.monthly=true;r.monthDay=Number(dateOf(selected).getDate())}else r.day=Number(schedule);rituals.push(r);save();closeModal();render();toast('Your new ritual is on the calendar.')});
+    const routineStack=document.querySelector('#view-plan .layout > .stack');
+    const productPanel=document.createElement('section');productPanel.className='panel pad';productPanel.innerHTML=`<div class="panel-head"><div><h2 class="panel-title">Products in my routine</h2><p class="quiet" style="margin-top:5px">Update your list whenever your routine changes.</p></div></div><form id="products-form"><div id="products-list"></div><div class="product-actions"><button class="btn secondary" type="button" id="add-product"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add product</button><button class="btn" type="submit">Save products</button></div></form>`;routineStack.append(productPanel);
+    const hairGoalOptions=['Length Retention And Growth','Volume And Texture Maintenance','Hydration','Curl Definition And Moisture'];let hairGoals=read('thalia-hair-goals',[]);if(!Array.isArray(hairGoals))hairGoals=[];hairGoals=hairGoals.filter(goal=>hairGoalOptions.includes(goal));
+    const goalsPanel=document.createElement('section');goalsPanel.className='panel pad';goalsPanel.innerHTML='<div class="panel-head"><div><h2 class="panel-title">Your hair goals</h2><p class="quiet" style="margin-top:5px">Choose the goals you want to focus on.</p></div></div><div id="hair-goals-list"></div><div class="hair-goal-add"><div class="field"><label for="hair-goal-select">Add a hair goal</label><select id="hair-goal-select"><option value="">Choose a goal</option></select></div><button class="btn" id="add-hair-goal" type="button" disabled>Add goal</button></div>';routineStack.append(goalsPanel);
+    const hairGoalsList=document.getElementById('hair-goals-list'),hairGoalSelect=document.getElementById('hair-goal-select'),addHairGoalButton=document.getElementById('add-hair-goal');function renderHairGoals(){hairGoalsList.innerHTML=hairGoals.length?hairGoals.map(goal=>`<div class="plan-day"><b>${safe(goal)}</b><button class="remove" type="button" data-remove-hair-goal="${safe(goal)}" aria-label="Remove goal ${safe(goal)}">Remove</button></div>`).join(''):'<p class="empty">No goals added yet.</p>';const available=hairGoalOptions.filter(goal=>!hairGoals.includes(goal));hairGoalSelect.innerHTML='<option value="">Choose a goal</option>'+available.map(goal=>`<option value="${safe(goal)}">${safe(goal)}</option>`).join('');addHairGoalButton.disabled=!available.length}hairGoalSelect.addEventListener('change',()=>{addHairGoalButton.disabled=!hairGoalSelect.value});addHairGoalButton.addEventListener('click',()=>{const goal=hairGoalSelect.value;if(!goal||hairGoals.includes(goal))return;hairGoals.push(goal);localStorage.setItem('thalia-hair-goals',JSON.stringify(hairGoals));renderHairGoals()});hairGoalsList.addEventListener('click',e=>{const remove=e.target.closest('[data-remove-hair-goal]');if(!remove)return;hairGoals=hairGoals.filter(goal=>goal!==remove.dataset.removeHairGoal);localStorage.setItem('thalia-hair-goals',JSON.stringify(hairGoals));renderHairGoals()});renderHairGoals();
+    const productsList=document.getElementById('products-list');
+    function productRow(product,index){return `<div class="product-row"><input type="hidden" name="productId" value="${safe(product.id)}"><input type="text" name="product" maxlength="80" aria-label="Product ${index+1}" placeholder="e.g. Leave-in conditioner" value="${safe(product.name)}"><button class="remove" type="button" data-product-remove aria-label="Remove ${safe(product.name||`product ${index+1}`)}">Remove</button></div>`}
+    function renderProducts(){productsList.innerHTML=products.length?products.map(productRow).join(''):'<p class="empty">No products listed yet. Add the products you currently use.</p>'}
+    function renderRitualProductPicker(selectedProducts=[]){
+      const options=document.getElementById('ritual-products-options'),summary=document.getElementById('ritual-products-summary');
+      options.innerHTML=products.length?products.map(product=>`<label class="product-option"><input type="checkbox" name="ritualProducts" value="${safe(product.id)}" ${selectedProducts.includes(product.id)?'checked':''}>${safe(product.name)}</label>`).join(''):'<p class="quiet">No products saved yet. Add products in My routine first.</p>';
+      const updateSummary=()=>{const count=options.querySelectorAll('input:checked').length;summary.textContent=count?`${count} product${count===1?'':'s'} selected`:products.length?'Select products':'No products available'};
+      summary.textContent='Select products';
+      options.querySelectorAll('input').forEach(input=>input.addEventListener('change',updateSummary));
+      updateSummary();
+    }
+    document.getElementById('add-product').addEventListener('click',()=>{const empty=productsList.querySelector('.empty');if(empty)empty.remove();const inputs=productsList.querySelectorAll('[name="product"]'),product={id:`product-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,name:''};productsList.insertAdjacentHTML('beforeend',productRow(product,inputs.length));productsList.querySelectorAll('[name="product"]')[inputs.length].focus()});
+    productsList.addEventListener('click',e=>{const remove=e.target.closest('[data-product-remove]');if(!remove)return;remove.closest('.product-row').remove();const rows=productsList.querySelectorAll('.product-row');rows.forEach((row,index)=>{row.querySelector('input[name="product"]').setAttribute('aria-label',`Product ${index+1}`);row.querySelector('[data-product-remove]').setAttribute('aria-label',`Remove product ${index+1}`)});if(!rows.length)productsList.innerHTML='<p class="empty">No products listed yet. Add the products you currently use.</p>'});
+    document.getElementById('products-form').addEventListener('submit',e=>{e.preventDefault();const rows=[...productsList.querySelectorAll('.product-row')];products=rows.map(row=>({id:row.querySelector('[name="productId"]').value,name:row.querySelector('[name="product"]').value.trim()})).filter(product=>product.name);const productIds=new Set(products.map(product=>product.id));rituals.forEach(ritual=>{ritual.products=(ritual.products||[]).filter(id=>productIds.has(id))});localStorage.setItem('thalia-products',JSON.stringify(products));save();if (thaliaCloudReady) {
+  saveThaliaCloudRecord('products', products)
+    .then(() => {
+      console.log('Products synced to the cloud.');
+    })
+    .catch(error => {
+      console.error('Product cloud sync failed:', error);
+    });
+}renderProducts();render();toast('Your product list has been saved.')});
+    const ritualProductField=document.createElement('div');ritualProductField.className='field';ritualProductField.innerHTML='<label>Products for this routine</label><details class="product-picker"><summary id="ritual-products-summary">Select products</summary><div class="product-picker-options" id="ritual-products-options"></div></details>';document.getElementById('schedule').closest('.field').after(ritualProductField);document.querySelectorAll('[data-add]').forEach(button=>button.addEventListener('click',()=>renderRitualProductPicker()));render();renderProducts();
+    
+  // --- Thalia Cognito sign-in ---
+  const authButton = document.getElementById('auth-button');
+
+  const cognitoDomain =
+    'https://eu-west-17aqesi6cz.auth.eu-west-1.amazoncognito.com';
+
+  const cognitoClientId = '5ntuuk5conn1u31uhtnt00h8h6';
+
+  const cognitoRedirectUri =
+    'http://127.0.0.1:5500/index.html';
+
+  function base64UrlEncode(bytes) {
+    let binary = '';
+    bytes.forEach(byte => {
+      binary += String.fromCharCode(byte);
+    });
+
+    return btoa(binary)
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+  }
+
+  async function createPkcePair() {
+    const randomBytes = crypto.getRandomValues(new Uint8Array(32));
+    const verifier = base64UrlEncode(randomBytes);
+
+    const digest = await crypto.subtle.digest(
+      'SHA-256',
+      new TextEncoder().encode(verifier)
+    );
+
+    const challenge = base64UrlEncode(new Uint8Array(digest));
+
+    return { verifier, challenge };
+  }
+
+  if (authButton) {
+    authButton.addEventListener('click', async () => {
+      try {
+        authButton.disabled = true;
+
+        const { verifier, challenge } = await createPkcePair();
+        const state = base64UrlEncode(
+          crypto.getRandomValues(new Uint8Array(32))
+        );
+
+        sessionStorage.setItem('thalia-pkce-verifier', verifier);
+        sessionStorage.setItem('thalia-oauth-state', state);
+
+        const params = new URLSearchParams({
+          client_id: cognitoClientId,
+          response_type: 'code',
+          scope: 'openid email phone',
+          redirect_uri: cognitoRedirectUri,
+          state,
+          code_challenge: challenge,
+          code_challenge_method: 'S256'
+        });
+
+        window.location.href =
+          `${cognitoDomain}/oauth2/authorize?${params.toString()}`;
+      } catch (error) {
+        console.error('Thalia sign-in error:', error);
+        alert('Could not start sign-in. Please try again.');
+        authButton.disabled = false;
+      }
+    });
+  }
+
+  async function handleCognitoCallback() {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const returnedState = params.get('state');
+
+    if (!code) return;
+
+    const savedState = sessionStorage.getItem('thalia-oauth-state');
+    const verifier = sessionStorage.getItem('thalia-pkce-verifier');
+
+    if (
+      !savedState ||
+      !returnedState ||
+      returnedState !== savedState ||
+      !verifier
+    ) {
+      alert('Sign-in verification failed. Please try signing in again.');
+      return;
+    }
+
+    try {
+      if (authButton) {
+        authButton.disabled = true;
+        authButton.textContent = 'Signing in…';
+      }
+
+      const response = await fetch(`${cognitoDomain}/oauth2/token`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          grant_type: 'authorization_code',
+          client_id: cognitoClientId,
+          code,
+          redirect_uri: cognitoRedirectUri,
+          code_verifier: verifier
+        })
+      });
+
+      const tokens = await response.json();
+
+      if (!response.ok || !tokens.access_token) {
+        throw new Error(
+          tokens.error_description || tokens.error || 'Token exchange failed'
+        );
+      }
+
+      sessionStorage.setItem('thalia-access-token', tokens.access_token);
+
+      if (tokens.id_token) {
+        sessionStorage.setItem('thalia-id-token', tokens.id_token);
+      }
+
+      if (tokens.expires_in) {
+        sessionStorage.setItem(
+          'thalia-token-expires-at',
+          String(Date.now() + tokens.expires_in * 1000)
+        );
+      }
+
+      sessionStorage.removeItem('thalia-pkce-verifier');
+      sessionStorage.removeItem('thalia-oauth-state');
+
+      // Remove the one-time authorization code from the address bar.
+      window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+      );
+
+      if (authButton) {
+        authButton.textContent = 'Signed in';
+        authButton.disabled = false;
+      }
+
+      console.log('Thalia Cognito sign-in successful.');
+    } catch (error) {
+      console.error('Thalia token exchange failed:', error);
+
+      if (authButton) {
+        authButton.textContent = 'Sign in';
+        authButton.disabled = false;
+      }
+
+      alert(
+        'Sign-in could not be completed. Please check the browser console and try again.'
+      );
+    }
+  }
+
+  handleCognitoCallback();
+
+  // --- Thalia cloud data helpers ---
+  let thaliaCloudReady = false;
+  const thaliaDataEndpoint =
+    'https://x4h42qkxg6.execute-api.eu-west-1.amazonaws.com/data';
+
+  async function getThaliaCloudRecords() {
+    const token = sessionStorage.getItem('thalia-access-token');
+
+    if (!token) {
+      throw new Error('Please sign in to Thalia first.');
+    }
+
+    const response = await fetch(thaliaDataEndpoint, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result.error || `Cloud read failed: HTTP ${response.status}`
+      );
+    }
+
+    return result.records || [];
+  }
+
+  async function saveThaliaCloudRecord(recordId, data) {
+    const token = sessionStorage.getItem('thalia-access-token');
+
+    if (!token) {
+      throw new Error('Please sign in to Thalia first.');
+    }
+
+    const response = await fetch(thaliaDataEndpoint, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ recordId, data })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result.error || `Cloud save failed: HTTP ${response.status}`
+      );
+    }
+
+    return result;
+  }
+window.testThaliaCloudRead = async function () {
+  try {
+    const records = await getThaliaCloudRecords();
+
+    console.log('Cloud read successful.');
+    console.table(
+      records.map(record => ({
+        recordId: record.recordedId,
+        dataType: Array.isArray(record.data)
+          ? 'array'
+          : typeof record.data
+      }))
+    );
+  } catch (error) {
+    console.error('Cloud read failed:', error);
+  }
+};
+
+async function loadThaliaCloudData() {
+  const records = await getThaliaCloudRecords();
+
+  const cloudData = {};
+
+  records.forEach(record => {
+    cloudData[record.recordedId] = record.data;
+  });
+
+  console.log(
+    'Cloud records available:',
+    Object.keys(cloudData)
+  );
+
+  return cloudData;
+}
+window.testThaliaCloudLoad = async function () {
+  try {
+    const data = await loadThaliaCloudData();
+    console.log('Loaded cloud data:', data);
+  } catch (error) {
+    console.error('Cloud load failed:', error);
+  }
+};
+
+function applyThaliaCloudData(cloudData) {
+  const defaultRituals = [
+    {
+      id: 'wash',
+      name: 'Wash & Condition',
+      category: 'wash',
+      day: 3,
+      time: '09:00',
+      detail: 'Gentle cleanse, then your favorite conditioner.'
+    },
+    {
+      id: 'mask',
+      name: 'Deep Conditioning mask',
+      category: 'mask',
+      day: 0,
+      time: '10:00',
+      detail: 'Give your strands a little extra love.'
+    },
+    {
+      id: 'scalp',
+      name: 'Scalp Massage',
+      category: 'care',
+      day: 2,
+      time: '20:00',
+      detail: 'A few minutes of fingertip massage.'
+    },
+    {
+      id: 'refresh',
+      name: 'Refresh & Moisturize',
+      category: 'care',
+      day: 5,
+      time: '09:00',
+      detail: 'A little hydration, right where you need it.'
+    }
+  ];
+
+  // Missing cloud records mean this account starts with
+  // default routines and empty completion history.
+  rituals = Array.isArray(cloudData.rituals)
+    ? cloudData.rituals
+    : defaultRituals;
+
+  done = cloudData.done &&
+    typeof cloudData.done === 'object' &&
+    !Array.isArray(cloudData.done)
+      ? cloudData.done
+      : {};
+
+  hairGoals = Array.isArray(cloudData.hairGoals)
+    ? cloudData.hairGoals.filter(goal =>
+        hairGoalOptions.includes(goal)
+      )
+    : [];
+
+  const cloudProducts = Array.isArray(cloudData.products)
+    ? cloudData.products
+    : [];
+
+  products = cloudProducts.map((product, index) =>
+    typeof product === 'string'
+      ? { id: `product-${index}`, name: product }
+      : {
+          id: String(product.id || `product-${index}`),
+          name: String(product.name || '').trim()
+        }
+  ).filter(product => product.name);
+
+  const preferences = cloudData.hairPreferences || {};
+
+  hairProfile = {
+    ...hairProfile,
+    texture: preferences.texture || '',
+    density: preferences.density || '',
+    porosity: preferences.porosity || ''
+  };
+
+  // Update local storage to reflect this signed-in account.
+  localStorage.setItem('thalia-rituals', JSON.stringify(rituals));
+  localStorage.setItem('thalia-done', JSON.stringify(done));
+  localStorage.setItem('thalia-hair-goals', JSON.stringify(hairGoals));
+  localStorage.setItem('thalia-products', JSON.stringify(products));
+  localStorage.setItem('thalia-hair-profile', JSON.stringify(hairProfile));
+
+  render();
+  renderProducts();
+  renderHairGoals();
+  renderProfileBadge();
+
+  console.log('Thalia data loaded into the app.');
+}
+
+  console.log('Thalia cloud helpers are ready.');
+window.testThaliaApplyCloudData = async function () {
+  try {
+    const cloudData = await loadThaliaCloudData();
+    applyThaliaCloudData(cloudData);
+    thaliaCloudReady = true;
+    console.log('Thalia cloud data applied successfully.');
+  } catch (error) {
+    console.error('Thalia cloud data apply failed:', error);
+  }
+};
+
+window.testThaliaCloudSave = async function () {
+  try {
+    const result = await saveThaliaCloudRecord('syncTest', {
+      message: 'Thalia routine sync test',
+      createdAt: new Date().toISOString()
+    });
+    console.log('Cloud save test succeeded:', result);
+  } catch (error) {
+    console.error('Cloud save test failed:', error);
+  }
+};
+
+  })();
+  </script>
+</body>
+</html>
