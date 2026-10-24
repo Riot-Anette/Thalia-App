@@ -4,7 +4,7 @@ Thalia is a full-stack web application designed to help users build, organize, a
 
 The application combines a responsive hair-care calendar and routine manager with secure user authentication and cloud-based data storage using a serverless AWS architecture.
 
-Thalia is currently in beta testing.
+Thalia is currently live
 
 ---
 
