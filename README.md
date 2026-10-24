@@ -29,7 +29,7 @@ Users can:
 
 ## Live Application
 
-**Thalia Beta**
+## User Testing & Production Validation.
 
 https://dreamy-bublanina-6d0d6b.netlify.app/
 
