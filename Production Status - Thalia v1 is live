@@ -1,0 +1,53 @@
+## Production Status
+
+**Thalia v1 is live.**
+
+Thalia has progressed from a browser-based prototype into a deployed full-stack cloud application with authenticated user accounts, protected APIs, per-user cloud storage, responsive interfaces, and production-tested data synchronization.
+
+The production application has completed testing covering authentication, session handling, cloud persistence, user-data isolation, responsive behavior, and logout privacy.
+
+### Production Architecture
+
+- **Frontend:** HTML5, CSS3 and JavaScript
+- **Hosting:** Netlify
+- **Authentication:** Amazon Cognito with OAuth 2.0 Authorization Code + PKCE
+- **API:** Amazon API Gateway with JWT authorization
+- **Backend:** AWS Lambda / Python
+- **Database:** Amazon DynamoDB
+- **Monitoring:** Amazon CloudWatch
+
+### Cloud-Synchronized Data
+
+Authenticated users can securely synchronize:
+
+- Hair-care routines
+- Completion history
+- Products
+- Hair goals
+- Hair preferences
+- Hair Diary entries
+
+Hair Diary entries are associated with the authenticated user's cloud account. Account-specific diary data is removed from the local browser state on logout and restored from the cloud after the same user signs back in.
+
+### Production Validation
+
+The production release has been tested for:
+
+- Account registration and authentication
+- OAuth 2.0 PKCE login
+- JWT-protected API access
+- Multiple-user data isolation
+- Routine cloud synchronization
+- Product and hair-goal synchronization
+- Hair Diary cloud save and restore
+- Logout cache protection
+- Session expiration
+- Mobile responsiveness
+- Desktop functionality
+- Production deployment behavior
+
+### Current Status
+
+🟢 **Live — Production v1**
+
+Thalia is now a deployed application. Development will continue through measured post-launch improvements informed by real user feedback rather than adding features solely for technical complexity.
